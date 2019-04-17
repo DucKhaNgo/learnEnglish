@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <form>
+        <select id="select1"></select>
+        <select id="select2"></select>
+        <select id="select3"></select>
+    </form>
+
+    <form name="frmMain">
+        X = <input type="text" id="txtX" name="txtX"><br />
+        Y = <input type="text" id="txtY" name="txtY"><br />
+        S = <input type="text" id="txtS" name="txtS" readonly><br />
+        <button type="button" onclick="sum()">SUM</button>
+    </form>
+    <div id="main">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, deleniti? Quos, aperiam ipsam. A expedita
+        placeat iste dicta quis, rem, consequatur veritatis, aliquam voluptas amet porro quidem exercitationem facilis
+        aperiam.
+    </div>
+    <button type="button" onclick="changeColor()">change color</button>
+    <div id="counter"></div>
+    <button type="button" onclick="start()">START</button>
+    <button type="button" onclick="stop()">STOP</button>
+</body>
+<script>
+    window.onload = function () {
+        var input = document.getElementById("txtX").focus();
+    }
+</script>
+<script>
+    var str;
+    var date = document.getElementById('select1');
+    str += "<option> Day </option>";
+    for (var i = 1; i <= 31; i++) {
+        str += "<option> " + i + " </option>";
+    }
+    date.innerHTML = str;
+
+    var str1;
+    var date1 = document.getElementById('select2');
+    str1 += "<option> Month </option>";
+    for (var i = 1; i <= 12; i++) {
+        str1 += "<option> " + i + " </option>";
+    }
+    date1.innerHTML = str1;
+
+    var str2;
+    var date2 = document.getElementById('select3');
+    str2 += "<option> Year </option>";
+    for (var i = 1980; i <= 2019; i++) {
+        str2 += "<option> " + i + " </option>";
+    }
+    date2.innerHTML = str2;
+
+
+    //sum
+    function sum() {
+        var txtX = document.getElementById("txtX").value;
+        var txtY = document.getElementById("txtY").value;
+        if (isNaN(txtX) || isNaN(txtY) || txtX == '' || txtY == '') {
+            alert("input not correct");
+        }
+        var x = parseInt(document.getElementById("txtX").value);
+        var y = parseInt(document.getElementById("txtY").value);
+        var s = x + y;
+        document.getElementById("txtS").value = s;
+    }
+    //function changecolor
+    function changeColor() {
+        var ele = document.getElementById('main');
+        var color = ['red', 'blue', 'purple'];
+        var rand = Math.floor(Math.random() * 3);
+        ele.style.color = color[rand];
+    }
+
+    //start
+    function start()
+    {
+        var i=0;
+        var counter=document.getElementById("counter");
+        time =setInterval(run,1000);
+        function run(){
+            i++;
+            counter.innerHTML=i;
+        }
+        
+    }
+</script>
+
+</html>

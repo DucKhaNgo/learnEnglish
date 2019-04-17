@@ -1,0 +1,77 @@
+CREATE DATABASE learnenglish
+
+CREATE TABLE users
+(
+    email varchar(255) PRIMARY KEY,
+    name varchar(255),
+    password varchar(255)
+)
+
+INSERT INTO users VALUES("ngoduckha@gmail.com", "duc kha", "123456")
+
+CREATE TABLE comments
+(
+	email varchar(255),
+	comments varchar(1000)
+)
+
+table firsttest(
+	id int,
+	part1 varchar(255),
+	part2 varchar(255),
+	dropdown
+)
+answerfirstTest(
+	id int,
+	ans varchar(255)
+)
+
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('1','I','a new bike yesterday.','buy|bought|have bought|have been bought');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('2','If you dont hurry up now, you','late for school.','have been|are|will be|are being');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('3','Can you tell me','the station is?','when|that|where|which');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('4','Do you know the man','is talking to your brother?','who|which|that|whose');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('5','I have not been on holiday','1996','for|since|when|until');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('6','I dont have','money.','much|more|many|some');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('7','I would spend my holidays in the USA if I','enough money.','have|had|would|would have');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('8','They','water sports.','like not|are not like|do not like|would not like');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('9','The weather today is even','than yesterday.','bad|badder|worse|more bad');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('10','How','people can you see outside?','much|many|about|are');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('11','They were swimming in the','','sea|see|bowl|sky');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('12','Let''s meet again next','','week|weak|mouth|again');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('13','We ate breakfast and','we left the house.','than|then|now|next');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('14','I haven''t been to London','three years.','for|since|before|after');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('15','I','a test at the moment.','write|writes|is writing|am writing');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('16','Charles met','friends at the club last night.','he|him|a|his');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('17','Would you like','apple?','a|an|many|a little');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('18','My sister has four','','child|childs|children|childrens');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('19','Give','the book','his|mine|we|them');
+INSERT INTO firsttest (id,part1,part2,dropdown)
+VALUES ('20','He opened the box','','careful|carefully|now|then');
+
+INSERT INTO answerfirsttext (id,ans)
+VALUES ('1','bought');
+INSERT INTO answerfirsttext(id,ans)
+VALUES ('2','will be');
+INSERT INTO answerfirsttext(id,ans)
+VALUES ('3','where');
+
+INSERT INTO answerfirsttext (id,ans) VALUES ('4', 'who'), ('5', 'since'), ('6', 'much'), ('7', 'had'), ('8', 'do not like'), ('9', 'worse'), ('10', 'many'), ('11', 'sea'), ('12', 'week'), ('13', 'then'), ('14', 'for'), ('15', 'am writing'), ('16', 'his'), ('17', 'an'), ('18', 'children'), ('19', 'them'), ('20', 'carefully') 
